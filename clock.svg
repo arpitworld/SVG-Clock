@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg id='svgclock' xmlns="http://www.w3.org/2000/svg" height="220" width="220">
+    <circle cx="110" cy="110" r="100" stroke="black" fill='white' stroke-width="2" />
+    <path id='sec' stroke="#000000" d="M110,110l0,-100">
+        <animateTransform 
+          attributeName="transform" 
+          attributeType="XML" 
+          type="rotate" 
+          from="0 110 110" 
+          to="360 110 110" 
+          dur="60s" 
+          repeatCount="indefinite" />
+    </path>
+    <path id='min' stroke="#1111ff" d="M110,110l-4,-70,4,-10, 4, 10, -4, 70" stroke-width='1' fill='#1111ff'>
+        <animateTransform 
+          attributeName="transform" 
+          attributeType="XML" 
+          type="rotate" 
+          from="0 110 110" 
+          to="360 110 110" 
+          dur="3600s" 
+          repeatCount="indefinite" />
+    </path>
+    <script>f='90 110 110';</script>
+    <path id='hrs' stroke="#ff1111" d="M110,110l-4,-50,4,-10, 4, 10, -4, 50" stroke-width='1' fill='#ff1111'>
+        <animateTransform 
+          attributeName="transform" 
+          attributeType="XML" 
+          type="rotate" 
+          from="0 110 110"
+          to="360 110 110" 
+          dur="216000s" 
+          repeatCount="indefinite" />
+    </path>
+    <script>
+      document.getElementById('svgclock').setCurrentTime(Date.now()/1000 - (new Date().getTimezoneOffset()*60));
+    </script>
+</svg>
