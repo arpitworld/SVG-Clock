@@ -29,7 +29,7 @@
           type="rotate" 
           from="0 110 110"
           to="360 110 110" 
-          dur="216000s" 
+          dur="43200" 
           repeatCount="indefinite" />
     </path>
     <script>
