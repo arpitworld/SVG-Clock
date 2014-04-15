@@ -1,4 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!doctype html>
+<html>
+<body>
+
 <svg id='svgclock' xmlns="http://www.w3.org/2000/svg" height="220" width="220">
     <circle cx="110" cy="110" r="100" stroke="black" fill='white' stroke-width="2" />
     <path d='M110,110m0,85l0,15' stroke-width='3px' stroke='black'/>
@@ -56,7 +59,12 @@
           dur="60s" 
           repeatCount="indefinite" />
     </path>
-    <script>
-      document.getElementById('svgclock').setCurrentTime(Date.now()/1000 - (new Date().getTimezoneOffset()*60));
-    </script>
 </svg>
+
+    <script>
+      var d = new Date();
+      document.getElementById('svgclock').setCurrentTime((d.getHours()%12)*3600 + d.getMinutes()*60 + d.getSeconds());
+    </script>
+
+</body>
+</html>
