@@ -1,0 +1,64 @@
+<svg id='svgclock' xmlns="http://www.w3.org/2000/svg" height="220" width="220">
+    <circle cx="110" cy="110" r="100" stroke="black" fill='white' stroke-width="2" />
+    <path d='M110,110m0,85l0,15' stroke-width='3px' stroke='black'/>
+    <path d='M110,110m45,77.94l5,8.66' stroke-width='1px' stroke='black'/>
+    <path d='M110,110m77.94,45l8.66,5' stroke-width='1px' stroke='black'/>
+    <path d='M110,110m85,0l15,0' stroke-width='3px' stroke='black'/>
+    <path d='M110,110m77.94,-45l8.66,-5' stroke-width='1px' stroke='black'/>
+    <path d='M110,110m45,-77.94l5,-8.66' stroke-width='1px' stroke='black'/>
+    <path d='M110,110m0,-85l0,-15' stroke-width='3px' stroke='black'/>
+    <path d='M110,110m-45,-77.94l-5,-8.66' stroke-width='1px' stroke='black'/>
+    <path d='M110,110m-77.94,-45l-8.66,-5' stroke-width='1px' stroke='black'/>
+    <path d='M110,110m-85,0l-15,0' stroke-width='3px' stroke='black'/>
+    <path d='M110,110m-77.94,45l-8.66,5' stroke-width='1px' stroke='black'/>
+    <path d='M110,110m-45,77.94l-5,8.66' stroke-width='1px' stroke='black'/>
+    <text x='110' y='48' text-anchor='middle'  font-size='18' font-family='Comic Sans Ms' >12</text>
+    <text x='150' y='55.72' text-anchor='middle'  font-size='18' font-family='Comic Sans Ms' >1</text>
+    <text x='179.28' y='82' text-anchor='middle'  font-size='18' font-family='Comic Sans Ms' >2</text>
+    <text x='190' y='119' text-anchor='middle'  font-size='18' font-family='Comic Sans Ms' >3</text>
+    <text x='179.28' y='156' text-anchor='middle'  font-size='18' font-family='Comic Sans Ms' >4</text>
+    <text x='150' y='182.28' text-anchor='middle'  font-size='18' font-family='Comic Sans Ms' >5</text>
+    <text x='110' y='190' text-anchor='middle'  font-size='18' font-family='Comic Sans Ms' >6</text>
+    <text x='70' y='182.28' text-anchor='middle'  font-size='18' font-family='Comic Sans Ms' >7</text>
+    <text x='40.72' y='156' text-anchor='middle'  font-size='18' font-family='Comic Sans Ms' >8</text>
+    <text x='30' y='119' text-anchor='middle'  font-size='18' font-family='Comic Sans Ms' >9</text>
+    <text x='40.72' y='82' text-anchor='middle'  font-size='18' font-family='Comic Sans Ms' >10</text>
+    <text x='70' y='55.72' text-anchor='middle'  font-size='18' font-family='Comic Sans Ms' >11</text>
+    <path id='min' stroke="#1111ff" d="M110,110l-4,-70,4,-10, 4, 10, -4, 70" stroke-width='1' fill='#1111ff'>
+        <animateTransform 
+          attributeName="transform" 
+          attributeType="XML" 
+          type="rotate" 
+          from="0 110 110" 
+          to="360 110 110" 
+          dur="3600s" 
+          repeatCount="indefinite" />
+    </path>
+    <script>f='90 110 110';</script>
+    <path id='hrs' stroke="#ff1111" d="M110,110l-4,-50,4,-10, 4, 10, -4, 50" stroke-width='1' fill='#ff1111'>
+        <animateTransform 
+          attributeName="transform" 
+          attributeType="XML" 
+          type="rotate" 
+          from="0 110 110"
+          to="360 110 110" 
+          dur="43200" 
+          repeatCount="indefinite" />
+    </path>
+    <path id='sec' stroke="#000000" d="M110,110l0,-100">
+        <animateTransform 
+          attributeName="transform" 
+          attributeType="XML" 
+          type="rotate" 
+          from="0 110 110" 
+          to="360 110 110" 
+          dur="60s" 
+          repeatCount="indefinite" />
+    </path>
+    <script>
+      var d = new Date();
+      document.getElementById('svgclock').setCurrentTime((d.getHours()%12)*3600 + d.getMinutes()*60 + d.getSeconds());
+    </script>
+</svg>
+
+
