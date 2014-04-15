@@ -3,4 +3,4 @@ SVG-Clock
 
 SVG Clock
 
-fiddle here: http://jsfiddle.net/arpitworld/2NQsB/6/
+demo here: arpitworld.github.io/SVG-Clock
